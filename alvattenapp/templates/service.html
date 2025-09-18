@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Services{% endblock %}
+
+{% block content %}
+<!-- Hero Start -->
+<div class="container-fluid pb-5 bg-primary hero-header">
+    <div class="container py-5">
+        <div class="row g-3 align-items-center">
+            <div class="col-lg-6 text-center text-lg-start">
+                <h1 class="display-1 mb-0 animated slideInLeft">Services</h1>
+            </div>
+            <div class="col-lg-6 animated slideInRight">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center justify-content-lg-end mb-0">
+                        <li class="breadcrumb-item"><a class="text-primary" href="#">Home</a></li>
+                        <li class="breadcrumb-item"><a class="text-primary" href="#">Pages</a></li>
+                        <li class="breadcrumb-item text-secondary active" aria-current="page">Services</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Hero End -->
+
+<!-- Service Start -->
+<div class="container-fluid py-5">
+    <div class="container py-5">
+        <div class="row g-5">
+            <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.1s">
+                <div class="service-item bg-light text-center p-5">
+                    <img class="img-fluid mb-4" src="{% static 'img/service-1.jpg' %}" alt="">
+                    <h4 class="mb-3">Interior Design</h4>
+                    <p class="mb-4">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet no labore
+                        lorem sit.</p>
+                    <a class="btn btn-primary px-4" href="#">Read More</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.3s">
+                <div class="service-item bg-light text-center p-5">
+                    <img class="img-fluid mb-4" src="{% static 'img/service-2.jpg' %}" alt="">
+                    <h4 class="mb-3">Project Planning</h4>
+                    <p class="mb-4">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet no labore
+                        lorem sit.</p>
+                    <a class="btn btn-primary px-4" href="#">Read More</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.5s">
+                <div class="service-item bg-light text-center p-5">
+                    <img class="img-fluid mb-4" src="{% static 'img/service-3.jpg' %}" alt="">
+                    <h4 class="mb-3">Renovation</h4>
+                    <p class="mb-4">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet no labore
+                        lorem sit.</p>
+                    <a class="btn btn-primary px-4" href="#">Read More</a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeIn" data-wow-delay="0.7s">
+                <div class="service-item bg-light text-center p-5">
+                    <img class="img-fluid mb-4" src="{% static 'img/service-4.jpg' %}" alt="">
+                    <h4 class="mb-3">Implement</h4>
+                    <p class="mb-4">Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet no labore
+                        lorem sit.</p>
+                    <a class="btn btn-primary px-4" href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+
+{% endblock %}
+</body>
