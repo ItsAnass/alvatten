@@ -1,3 +1,21 @@
+(function () {
+    document.addEventListener('DOMContentLoaded', function() {
+        var addBtn = document.getElementById('add-image-input');
+        var imageInputsDiv = document.getElementById('image-inputs');
+        if (addBtn && imageInputsDiv) {
+            addBtn.addEventListener('click', function() {
+                var newInputGroup = document.createElement('div');
+                newInputGroup.className = 'input-group mb-3';
+                newInputGroup.innerHTML = `
+                    <span class="input-group-text" id="inputGroupFileAddon01"><i class="bi bi-image"></i></span>
+                    <input type="file" name="images[]" class="form-control mb-1" accept="image/*" placeholder="Choose image" title="Choose image">
+                    <label class="form-label ms-2">Upload Image (optional)</label>
+                `;
+                imageInputsDiv.appendChild(newInputGroup);
+            });
+        }
+    });
+})();
 (function ($) {
     "use strict";
 
