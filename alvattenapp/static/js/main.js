@@ -1,8 +1,29 @@
 (function () {
     document.addEventListener('DOMContentLoaded', function() {
-        var addBtn = document.getElementById('add-image-input');
         var imageInputsDiv = document.getElementById('image-inputs');
+        var addBtn = document.getElementById('add-image-input');
+
+        function updateAddButtonVisibility() {
+            var inputs = imageInputsDiv.querySelectorAll('input[type="file"]');
+            // Only show the add button if the last input has a file selected
+            if (inputs.length > 0 && inputs[inputs.length - 1].files.length > 0) {
+                addBtn.style.display = '';
+            } else {
+                addBtn.style.display = 'none';
+            }
+        }
+
         if (addBtn && imageInputsDiv) {
+            // Initial state
+            updateAddButtonVisibility();
+
+            // Delegate change event to all file inputs
+            imageInputsDiv.addEventListener('change', function(e) {
+                if (e.target && e.target.type === 'file') {
+                    updateAddButtonVisibility();
+                }
+            });
+
             addBtn.addEventListener('click', function() {
                 var newInputGroup = document.createElement('div');
                 newInputGroup.className = 'input-group mb-3';
@@ -12,6 +33,7 @@
                     <label class="form-label ms-2">Upload Image (optional)</label>
                 `;
                 imageInputsDiv.appendChild(newInputGroup);
+                updateAddButtonVisibility();
             });
         }
     });

@@ -1,4 +1,3 @@
-
 from django.views.generic import FormView , TemplateView
 from django.urls import reverse_lazy
 from django.contrib import messages
@@ -22,10 +21,26 @@ class ContactPageView(FormView):
     success_url = reverse_lazy('contact')
 
     def form_valid(self, form):
+        # Compose a proper email body with name, subject, and message
+        name = form.cleaned_data['name']
+        email_address = form.cleaned_data['email']
+        subject = form.cleaned_data['subject']
+        message = form.cleaned_data['message']
+        
+        email_body = f"""
+        You have received a new contact form submission:
+
+        Name: {name}
+        Email: {email_address}
+        Subject: {subject}
+        Message:
+        {message}
+        """
+
         email = EmailMessage(
-            subject=form.cleaned_data['subject'],
-            body=form.cleaned_data['message'],
-            from_email=form.cleaned_data['email'],
+            subject=f"Contact Form: {subject}",
+            body=email_body,
+            from_email=email_address,
             to=[settings.DEFAULT_FROM_EMAIL],
         )
         # Handle multiple images
@@ -59,5 +74,5 @@ class TeamPageView(TemplateView):
 
 class TestimonialPageView(TemplateView):
     template_name = "testimonial.html"
-   
+
 
