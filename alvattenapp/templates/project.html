@@ -31,10 +31,11 @@
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <div class="row g-0">
+                    <div class="row g-0" id="project-gallery">
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.2s">
                             <div class="project-item position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="{% static 'img/project-1.jpg' %}" alt="">
+                                    <div class="d-none project-images" data-images="{% static 'img/project-1.jpg' %},{% static 'img/project-2.jpg' %},{% static 'img/project-3.jpg' %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
                                     <h4 class="text-white">Kitchen</h4>
                                     <small class="text-white">72 Projects</small>
@@ -44,6 +45,7 @@
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
                             <div class="project-item position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="{% static 'img/project-2.jpg' %}" alt="">
+                                    <div class="d-none project-images" data-images="{% static 'img/project-2.jpg' %},{% static 'img/project-4.jpg' %},{% static 'img/project-5.jpg' %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
                                     <h4 class="text-white">Bathroom</h4>
                                     <small class="text-white">67 Projects</small>
@@ -53,6 +55,7 @@
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.4s">
                             <div class="project-item position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="{% static 'img/project-3.jpg' %}" alt="">
+                                    <div class="d-none project-images" data-images="{% static 'img/project-3.jpg' %},{% static 'img/project-6.jpg' %},{% static 'img/project-1.jpg' %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
                                     <h4 class="text-white">Bedroom</h4>
                                     <small class="text-white">53 Projects</small>
@@ -62,6 +65,7 @@
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
                             <div class="project-item position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="{% static 'img/project-4.jpg' %}" alt="">
+                                    <div class="d-none project-images" data-images="{% static 'img/project-4.jpg' %},{% static 'img/project-2.jpg' %},{% static 'img/project-5.jpg' %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
                                     <h4 class="text-white">Living Room</h4>
                                     <small class="text-white">33 Projects</small>
@@ -71,6 +75,7 @@
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
                             <div class="project-item position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="{% static 'img/project-5.jpg' %}" alt="">
+                                    <div class="d-none project-images" data-images="{% static 'img/project-5.jpg' %},{% static 'img/project-3.jpg' %},{% static 'img/project-6.jpg' %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
                                     <h4 class="text-white">Furniture</h4>
                                     <small class="text-white">87 Projects</small>
@@ -80,6 +85,7 @@
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.7s">
                             <div class="project-item position-relative overflow-hidden">
                                 <img class="img-fluid w-100" src="{% static 'img/project-6.jpg' %}" alt="">
+                                    <div class="d-none project-images" data-images="{% static 'img/project-6.jpg' %},{% static 'img/project-1.jpg' %},{% static 'img/project-4.jpg' %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
                                     <h4 class="text-white">Rennovation</h4>
                                     <small class="text-white">69 Projects</small>
@@ -93,6 +99,33 @@
     </div>
     <!-- Project End -->
 
+        <!-- Modal Gallery (Bootstrap 5) -->
+        <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="projectModalLabel">Project Gallery</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="modalGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-indicators" id="modal-gallery-indicators"></div>
+                            <div class="carousel-inner" id="modal-gallery-inner">
+                                <!-- Images will be injected here -->
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#modalGalleryCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#modalGalleryCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     {% endblock %}
 

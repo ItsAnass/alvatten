@@ -1,6 +1,10 @@
 (function () {
     document.addEventListener('DOMContentLoaded', function() {
         var imageInputsDiv = document.getElementById('image-inputs');
+        if (!imageInputsDiv) {
+            // Prevent JS errors if the element is missing
+            return;
+        }
 
         // Create a single file input
         var fileInput = document.createElement('input');
@@ -132,5 +136,62 @@
         nav: false
     });
     
+
+        // Project gallery modal with per-project images and Bootstrap 5 (no jQuery)
+        document.addEventListener('DOMContentLoaded', function () {
+                var gallery = document.getElementById('project-gallery');
+                var modal = document.getElementById('projectModal');
+                if (gallery && modal) {
+                        gallery.addEventListener('click', function (e) {
+                                var projectItem = e.target.closest('.project-item');
+                                if (!projectItem) return;
+                                e.preventDefault();
+                                var imagesDiv = projectItem.querySelector('.project-images');
+                                if (!imagesDiv) return;
+                                var images = imagesDiv.dataset.images.split(',');
+                                var itemsHtml = '';
+                                var indicatorsHtml = '';
+                                images.forEach(function (src, i) {
+                                        var active = i === 0 ? 'active' : '';
+                                        itemsHtml += '<div class="carousel-item ' + active + '">' +
+                                                '<img src="' + src + '" class="d-block w-100" alt="Project image ' + (i+1) + '">' +
+                                                '</div>';
+                                        indicatorsHtml += '<button type="button" data-bs-target="#modalGalleryCarousel" data-bs-slide-to="' + i + '"' + (active ? ' class="active" aria-current="true"' : '') + ' aria-label="Slide ' + (i+1) + '"></button>';
+                                });
+                                var carouselHtml = `
+<div id="modalGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators" id="modal-gallery-indicators">
+        ${indicatorsHtml}
+    </div>
+    <div class="carousel-inner" id="modal-gallery-inner">
+        ${itemsHtml}
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#modalGalleryCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#modalGalleryCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>`;
+                                modal.querySelector('.modal-body').innerHTML = carouselHtml;
+                                // Show modal using Bootstrap 5 Modal API
+                                var bsModal = new bootstrap.Modal(modal);
+
+                                bsModal.show();
+                                // Reset carousel to first image
+                                var carouselElem = document.getElementById('modalGalleryCarousel');
+                                if (carouselElem) {
+                                    var bsCarousel = new bootstrap.Carousel(carouselElem, { interval: false });
+                                    bsCarousel.to(0);
+                                }
+
+                        });
+                    }
+                });
+        // End Bootstrap 5 gallery modal
+
 })(jQuery);
+
 
