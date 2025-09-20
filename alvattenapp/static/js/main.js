@@ -152,12 +152,19 @@
                                 var itemsHtml = '';
                                 var indicatorsHtml = '';
                                 images.forEach(function (src, i) {
-                                        var active = i === 0 ? 'active' : '';
-                                        itemsHtml += '<div class="carousel-item ' + active + '">' +
-                                                '<img src="' + src + '" class="d-block w-100" alt="Project image ' + (i+1) + '">' +
-                                                '</div>';
-                                        indicatorsHtml += '<button type="button" data-bs-target="#modalGalleryCarousel" data-bs-slide-to="' + i + '"' + (active ? ' class="active" aria-current="true"' : '') + ' aria-label="Slide ' + (i+1) + '"></button>';
+                                    var active = i === 0 ? 'active' : '';
+                                    itemsHtml += '<div class="carousel-item ' + active + '">' +
+                                        '<img src="' + src + '" class="d-block w-100" alt="Project image ' + (i+1) + '">' +
+                                        '</div>';
+                                    indicatorsHtml += '<button type="button" data-bs-target="#modalGalleryCarousel" data-bs-slide-to="' + i + '"' + (active ? ' class="active" aria-current="true"' : '') + ' aria-label="Slide ' + (i+1) + '"></button>';
                                 });
+                                // Get project name for modal title
+                                var projectTitleElem = projectItem.querySelector('.project-overlay h4');
+                                var projectTitle = projectTitleElem ? projectTitleElem.textContent.trim() : 'Project Gallery';
+                                var modalTitleElem = modal.querySelector('.modal-title');
+                                if (modalTitleElem) {
+                                    modalTitleElem.textContent = projectTitle;
+                                }
                                 var carouselHtml = `
 <div id="modalGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators" id="modal-gallery-indicators">
