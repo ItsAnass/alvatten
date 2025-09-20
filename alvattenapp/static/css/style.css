@@ -1,3 +1,23 @@
+/* Make modal gallery carousel arrows more visible */
+#projectModal .carousel-control-prev,
+#projectModal .carousel-control-next {
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+#projectModal .carousel-control-prev-icon,
+#projectModal .carousel-control-next-icon {
+    background-size: 60px 60px;
+    filter: drop-shadow(0 0 6px #000) brightness(2);
+}
+#projectModal .carousel-control-prev {
+    left: 10px;
+}
+#projectModal .carousel-control-next {
+    right: 10px;
+}
 /********** Template CSS **********/
 
 /*** Spinner ***/
