@@ -62,15 +62,17 @@
                     <div class="navbar-nav ms-auto">
 
                         <a href="{% url 'home' %}" class="nav-item nav-link{% if request.path == '/' %} active{% endif %}">Home</a>
-                        <a href="{% url 'about' %}" class="nav-item nav-link{% if request.path == '/about/' %} active{% endif %}">About</a>
-                        <a href="{% url 'services' %}" class="nav-item nav-link{% if request.path == '/services/' %} active{% endif %}">Services</a>
+                        <a href="{% url 'about' %}" class="nav-item nav-link{% if request.path == '/about/' %} active{% endif %}">Om Oss</a>
+                        <a href="{% url 'services' %}" class="nav-item nav-link{% if request.path == '/services/' %} active{% endif %}">Tjänster</a>
                         <a href="{% url 'projects' %}" class="nav-item nav-link{% if request.path == '/projects/' %} active{% endif %}">Projects</a>
                         <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tjänster</a>
                             <div class="dropdown-menu bg-light mt-2">
-                                <a href="{% url 'features' %}" class="dropdown-item">Features</a>
-                                <a href="{% url 'team' %}" class="dropdown-item">Our Team</a>
-                                <a href="{% url 'testimonial' %}" class="dropdown-item">Reviews</a>
+                                <a href="{% url 'features' %}" class="dropdown-item">Pooler</a>
+                                <a href="{% url 'team' %}" class="dropdown-item">Spa</a>
+                                <a href="{% url 'testimonial' %}" class="dropdown-item">Vattenfall</a>
+                                <a href="#" class="dropdown-item">Dammar (Konstgjorda vattenmiljöer)</a>
+                                <a href="#" class="dropdown-item">Service & Underhåll</a>
                             </div>
                         </div>
                         <a href="{% url 'contact' %}" class="nav-item nav-link{% if request.path == '/contact/' %} active{% endif %}">Contact</a>
