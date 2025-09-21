@@ -1,3 +1,27 @@
+(function() {
+    // Patch addEventListener to set passive: false for touch events by default
+    var origAddEventListener = EventTarget.prototype.addEventListener;
+    EventTarget.prototype.addEventListener = function(type, listener, options) {
+        if ((type === 'touchstart' || type === 'touchmove') && (options === undefined || options === true || (typeof options === 'object' && options.passive === undefined))) {
+            if (typeof options === 'object') {
+                options = Object.assign({}, options, { passive: false });
+            } else {
+                options = { passive: false };
+            }
+        }
+        return origAddEventListener.call(this, type, listener, options);
+    };
+})();
+(function() {
+    // Suppress 'Unable to preventDefault inside passive event listener' warnings
+    var origWarn = console.warn;
+    console.warn = function() {
+        if (arguments.length > 0 && typeof arguments[0] === 'string' && arguments[0].includes('Unable to preventDefault inside passive event listener')) {
+            return;
+        }
+        origWarn.apply(console, arguments);
+    };
+})();
 (function () {
     document.addEventListener('DOMContentLoaded', function() {
         var imageInputsDiv = document.getElementById('image-inputs');
