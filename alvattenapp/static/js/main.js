@@ -223,6 +223,41 @@
                 });
         // End Bootstrap 5 gallery modal
 
+
+    // Hero header image modal gallery
+    document.addEventListener('DOMContentLoaded', function () {
+        var heroCarousel = document.querySelector('.header-carousel');
+        var heroModal = document.getElementById('heroGalleryModal');
+        if (heroCarousel && heroModal) {
+            var heroImages = Array.from(heroCarousel.querySelectorAll('img'));
+            heroImages.forEach(function(img, idx) {
+                img.style.cursor = 'pointer';
+                img.addEventListener('click', function() {
+                    // Build carousel items and indicators
+                    var itemsHtml = '';
+                    var indicatorsHtml = '';
+                    heroImages.forEach(function(srcImg, i) {
+                        var active = i === idx ? 'active' : '';
+                        itemsHtml += '<div class="carousel-item ' + active + '">' +
+                            '<img src="' + srcImg.src + '" class="d-block w-100" alt="Hero image ' + (i+1) + '">' +
+                            '</div>';
+                        indicatorsHtml += '<button type="button" data-bs-target="#heroGalleryCarousel" data-bs-slide-to="' + i + '"' + (active ? ' class="active" aria-current="true"' : '') + ' aria-label="Slide ' + (i+1) + '"></button>';
+                    });
+                    heroModal.querySelector('#hero-gallery-inner').innerHTML = itemsHtml;
+                    heroModal.querySelector('#hero-gallery-indicators').innerHTML = indicatorsHtml;
+                    // Show modal
+                    var bsModal = new bootstrap.Modal(heroModal);
+                    bsModal.show();
+                    // Reset carousel to clicked image
+                    var carouselElem = document.getElementById('heroGalleryCarousel');
+                    if (carouselElem) {
+                        var bsCarousel = new bootstrap.Carousel(carouselElem, { interval: false });
+                        bsCarousel.to(idx);
+                    }
+                });
+            });
+        }
+    });
 })(jQuery);
 
 
