@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <title>
-    {% block title %}
-    AVD
-    {% endblock  %}
+        {% block title %}
+        AVD
+        {% endblock %}
     </title>
-    
+
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -61,12 +61,16 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
 
-                        <a href="{% url 'home' %}" class="nav-item nav-link{% if request.path == '/' %} active{% endif %}">Home</a>
-                        <a href="{% url 'about' %}" class="nav-item nav-link{% if request.path == '/about/' %} active{% endif %}">Om Oss</a>
-                        <a href="{% url 'services' %}" class="nav-item nav-link{% if request.path == '/services/' %} active{% endif %}">Tjänster</a>
-                        <a href="{% url 'projects' %}" class="nav-item nav-link{% if request.path == '/projects/' %} active{% endif %}">Projects</a>
+                        <a href="{% url 'home' %}"
+                            class="nav-item nav-link{% if request.path == '/' %} active{% endif %}">Home</a>
+                        <a href="{% url 'about' %}"
+                            class="nav-item nav-link{% if request.path == '/about/' %} active{% endif %}">Om Oss</a>
+                        <a href="{% url 'services' %}"
+                            class="nav-item nav-link{% if request.path == '/services/' %} active{% endif %}">Tjänster</a>
+                        <a href="{% url 'projects' %}"
+                            class="nav-item nav-link{% if request.path == '/projects/' %} active{% endif %}">Projects</a>
                         <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tjänster</a>
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Tjänster</a>
                             <div class="dropdown-menu bg-light mt-2">
                                 <a href="{% url 'features' %}" class="dropdown-item">Pooler</a>
                                 <a href="{% url 'team' %}" class="dropdown-item">Spa</a>
@@ -75,7 +79,8 @@
                                 <a href="#" class="dropdown-item">Service & Underhåll</a>
                             </div>
                         </div>
-                        <a href="{% url 'contact' %}" class="nav-item nav-link{% if request.path == '/contact/' %} active{% endif %}">Contact</a>
+                        <a href="{% url 'contact' %}"
+                            class="nav-item nav-link{% if request.path == '/contact/' %} active{% endif %}">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -91,7 +96,7 @@
         <div class="container py-5">
             <div class="row g-5 align-items-center mb-5">
                 <div class="col-lg-6">
-                    <h1 class="display-1 mb-4 animated slideInRight">We Make Your <span class="text-primary">Home</span>
+                    <h1 class="display-1 mb-4 animated slideInRight">We Make Your <span class="text-primary">Pool</span>
                         Better</h1>
                 </div>
                 <div class="col-lg-6">
@@ -102,47 +107,15 @@
                     </div>
                 </div>
             </div>
-            <div class="row g-5 animated fadeIn">
-                <div class="col-md-6 col-lg-3">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0 btn-square border border-2 border-white me-3">
-                            <img src="{% static 'img/1.1.svg' %}" alt="Icon" width="40" height="40">
-                        </div>
-                        <h5 class="lh-base mb-0">Crafted Furniture</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0 btn-square border border-2 border-white me-3">
-                            <i class="fa fa-robot text-primary"></i>
-                        </div>
-                        <h5 class="lh-base mb-0">Sustainable Material</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0 btn-square border border-2 border-white me-3">
-                            <i class="fa fa-robot text-primary"></i>
-                        </div>
-                        <h5 class="lh-base mb-0">Innovative Architects</h5>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0 btn-square border border-2 border-white me-3">
-                            <i class="fa fa-robot text-primary"></i>
-                        </div>
-                        <h5 class="lh-base mb-0">Budget Friendly</h5>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
-    
+    </div>
+
     <!-- Hero End -->
 
 
-    
+
 
     <!-- About Start -->
     <div class="container-fluid py-5">
@@ -245,9 +218,9 @@
         </div>
     </div>
     <!-- Feature End -->
-    
 
-    
+
+
 
 
     <!-- Project Start -->
@@ -268,7 +241,7 @@
                                 <img class="img-fluid w-100" src="{% static 'img/project-1.jpg' %}" alt="">
                                 <a class="project-overlay text-decoration-none" href="#!">
                                     <h4 class="text-white">Kitchen</h4>
-                                    <small class="text-white">72 Projects</small>
+
                                 </a>
                             </div>
                         </div>
@@ -277,7 +250,7 @@
                                 <img class="img-fluid w-100" src="{% static 'img/project-2.jpg' %}" alt="">
                                 <a class="project-overlay text-decoration-none" href="#!">
                                     <h4 class="text-white">Bathroom</h4>
-                                    <small class="text-white">67 Projects</small>
+
                                 </a>
                             </div>
                         </div>
@@ -286,7 +259,7 @@
                                 <img class="img-fluid w-100" src="{% static 'img/project-3.jpg' %}" alt="">
                                 <a class="project-overlay text-decoration-none" href="#!">
                                     <h4 class="text-white">Bedroom</h4>
-                                    <small class="text-white">53 Projects</small>
+
                                 </a>
                             </div>
                         </div>
@@ -295,7 +268,7 @@
                                 <img class="img-fluid w-100" src="{% static 'img/project-4.jpg' %}" alt="">
                                 <a class="project-overlay text-decoration-none" href="#!">
                                     <h4 class="text-white">Living Room</h4>
-                                    <small class="text-white">33 Projects</small>
+
                                 </a>
                             </div>
                         </div>
@@ -304,7 +277,7 @@
                                 <img class="img-fluid w-100" src="{% static 'img/project-5.jpg' %}" alt="">
                                 <a class="project-overlay text-decoration-none" href="#!">
                                     <h4 class="text-white">Furniture</h4>
-                                    <small class="text-white">87 Projects</small>
+
                                 </a>
                             </div>
                         </div>
@@ -313,7 +286,7 @@
                                 <img class="img-fluid w-100" src="{% static 'img/project-6.jpg' %}" alt="">
                                 <a class="project-overlay text-decoration-none" href="#!">
                                     <h4 class="text-white">Rennovation</h4>
-                                    <small class="text-white">69 Projects</small>
+
                                 </a>
                             </div>
                         </div>
@@ -323,9 +296,9 @@
         </div>
     </div>
     <!-- Project End -->
-    
 
-    
+
+
     <!-- Service Start -->
     <div class="container-fluid py-5">
         <div class="container py-5">
@@ -397,9 +370,9 @@
         </div>
     </div>
     <!-- Service End -->
-    
 
-    
+
+
 
     <!-- Team Start -->
     <div class="container-fluid bg-light py-5">
@@ -503,9 +476,9 @@
         </div>
     </div>
     <!-- Team End -->
-    
 
-    
+
+
 
     <!-- Testimonial Start -->
     <div class="container-xxl py-5">
@@ -634,7 +607,7 @@
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a class="border-bottom" href="#!">Your Site Name</a>, All Right Reserved.
 
-                       
+
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
