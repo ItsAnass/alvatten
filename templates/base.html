@@ -68,10 +68,7 @@
                         <a href="{% url 'projects' %}"
                             class="nav-item nav-link{% if request.path == '/projects/' %} active{% endif %}">Projects</a>
                         <div class="nav-item dropdown">
-                            <div class="d-flex align-items-center">
-                                <a href="{% url 'services' %}" class="nav-link pe-0" style="padding-right:0;margin-right:-4px;">Tjänster</a>
-                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" style="padding-left:0.15rem;padding-right:0;margin-left:-4px;font-size:1em;"></a>
-                            </div>
+                            <a href="{% url 'services' %}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Tjänster</a>
                             <div class="dropdown-menu bg-light mt-2">
                                 <a href="{% url 'features' %}" class="dropdown-item">Pooler</a>
                                 <a href="{% url 'team' %}" class="dropdown-item">Spa</a>
@@ -197,7 +194,7 @@
                 <div class="col-lg-7">
                     <div class="row g-0">
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.2s">
-                            <div class="service-item h-100 d-flex flex-column justify-content-center bg-light">
+                            <div class="service-item h-100 d-flex flex-column justify-content-center" style="background-color: #D9DCD6;">
                                 <a href="#!" class="service-img position-relative mb-4">
                                     <img class="img-fluid w-100" src="{% static 'img/service-1.jpg' %}" alt="">
                                     <h3>Interior Design</h3>
@@ -207,7 +204,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.4s">
-                            <div class="service-item h-100 d-flex flex-column justify-content-center bg-light">
+                            <div class="service-item h-100 d-flex flex-column justify-content-center" style="background-color: #D9DCD6;">
                                 <a href="#!" class="service-img position-relative mb-4">
                                     <img class="img-fluid w-100" src="{% static 'img/service-2.jpg' %}" alt="">
                                     <h3>Implement</h3>
@@ -217,7 +214,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.6s">
-                            <div class="service-item h-100 d-flex flex-column justify-content-center bg-light">
+                            <div class="service-item h-100 d-flex flex-column justify-content-center" style="background-color: #D9DCD6;">
                                 <a href="#!" class="service-img position-relative mb-4">
                                     <img class="img-fluid w-100" src="{% static 'img/service-3.jpg' %}" alt="">
                                     <h3>Renovation</h3>
@@ -227,7 +224,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.8s">
-                            <div class="service-item h-100 d-flex flex-column justify-content-center bg-light">
+                            <div class="service-item h-100 d-flex flex-column justify-content-center" style="background-color: #D9DCD6;">
                                 <a href="#!" class="service-img position-relative mb-4">
                                     <img class="img-fluid w-100" src="{% static 'img/service-4.jpg' %}" alt="">
                                     <h3>Commercial</h3>
