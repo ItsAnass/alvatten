@@ -306,6 +306,31 @@
     color: var(--bs-white);
 }
 
+/* Service grid separators: vertical and horizontal lines */
+@media (min-width: 992px) {
+  .service-row {
+    position: relative;
+  }
+  .service-row > .col-md-6 {
+    position: relative;
+  }
+  /* Vertical line between left and right columns */
+  .service-row > .col-md-6:nth-child(1),
+  .service-row > .col-md-6:nth-child(3) {
+    border-right: 2px solid #d9dcd6;
+  }
+  /* Horizontal line between top and bottom rows */
+  .service-row > .col-md-6:nth-child(1),
+  .service-row > .col-md-6:nth-child(2) {
+    border-bottom: 2px solid #d9dcd6;
+  }
+}
+@media (max-width: 991.98px) {
+  .service-row > .col-md-6 {
+    border: none !important;
+  }
+}
+
 
 /*** Our Team ***/
 .team-item img {
@@ -487,4 +512,11 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+/* Rounded edges for highlighted span in section titles */
+.text-uppercase.text-primary.bg-light.px-2 {
+  border-radius: 0.7em;
+  padding-left: 0.7em !important;
+  padding-right: 0.7em !important;
 }
