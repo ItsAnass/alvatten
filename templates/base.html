@@ -100,11 +100,21 @@
                         Better</h1>
                 </div>
                 <div class="col-lg-6">
-                        <div class="owl-carousel header-carousel animated fadeIn w-100" style="max-height:500px;display:flex;align-items:center;">
+                        <div class="owl-carousel header-carousel animated fadeIn w-100" style="max-width:600px;margin:0 auto;">
                             {% get_random_hero_images as hero_images %}
                             {% for img in hero_images %}
-                                <img class="img-fluid mx-auto d-block" style="max-height:400px;object-fit:contain;" src="{% static img %}" alt="">
+                                <div class="hero-img-wrapper" style="width:100%;aspect-ratio:3/2;max-width:600px;max-height:400px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#e9ecef;">
+                                    <img class="img-fluid" style="width:100%;height:100%;object-fit:cover;" src="{% static img %}" alt="">
+                                </div>
                             {% endfor %}
+                        </div>
+                        <div class="custom-hero-arrows d-flex justify-content-center align-items-center mt-3">
+                            <button id="hero-arrow-left" class="btn btn-primary mx-2" title="Previous image" style="border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:2em;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            </button>
+                            <button id="hero-arrow-right" class="btn btn-primary mx-2" title="Next image" style="border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:2em;">
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
+                            </button>
                         </div>
                 </div>
             </div>

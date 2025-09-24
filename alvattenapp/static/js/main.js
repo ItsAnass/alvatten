@@ -139,12 +139,20 @@
 
 
     // Header carousel
-    $(".header-carousel").owlCarousel({
+    var $headerCarousel = $(".header-carousel");
+    $headerCarousel.owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
         loop: true,
         dots: false,
         items: 1
+    });
+    // Custom hero arrows below images
+    $(document).on('click', '#hero-arrow-left', function() {
+        $headerCarousel.trigger('prev.owl.carousel');
+    });
+    $(document).on('click', '#hero-arrow-right', function() {
+        $headerCarousel.trigger('next.owl.carousel');
     });
 
 
