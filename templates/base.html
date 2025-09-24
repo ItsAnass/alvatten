@@ -94,18 +94,18 @@
     {% load random_hero_images %}
     <div class="container-fluid pb-4 hero-header bg-light mb-5">
         <div class="container py-3">
-            <div class="row g-5 align-items-center mb-5">
+                <div class="row g-5 align-items-center mb-5" style="min-height:1px;">
                 <div class="col-lg-6">
                     <h1 class="display-1 mb-4 animated slideInRight">We Make Your <span class="text-primary">Pool</span>
                         Better</h1>
                 </div>
                 <div class="col-lg-6">
-                    <div class="owl-carousel header-carousel animated fadeIn">
-                        {% get_random_hero_images as hero_images %}
-                        {% for img in hero_images %}
-                            <img class="img-fluid" src="{% static img %}" alt="">
-                        {% endfor %}
-                    </div>
+                        <div class="owl-carousel header-carousel animated fadeIn w-100" style="max-height:500px;display:flex;align-items:center;">
+                            {% get_random_hero_images as hero_images %}
+                            {% for img in hero_images %}
+                                <img class="img-fluid mx-auto d-block" style="max-height:400px;object-fit:contain;" src="{% static img %}" alt="">
+                            {% endfor %}
+                        </div>
                 </div>
             </div>
         </div>
