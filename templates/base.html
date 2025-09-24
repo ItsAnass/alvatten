@@ -89,6 +89,9 @@
     <!-- Hero Start -->
     {% block content %}
 
+    {# Dynamic hero images from hero-random folder #}
+    {% load static %}
+    {% load random_hero_images %}
     <div class="container-fluid pb-5 hero-header bg-light mb-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center mb-5">
@@ -98,9 +101,10 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="owl-carousel header-carousel animated fadeIn">
-                        <img class="img-fluid" src="{% static 'img/hero-slider-1.jpg' %}" alt="">
-                        <img class="img-fluid" src="{% static 'img/hero-slider-2.jpg' %}" alt="">
-                        <img class="img-fluid" src="{% static 'img/hero-slider-3.jpg' %}" alt="">
+                        {% get_random_hero_images as hero_images %}
+                        {% for img in hero_images %}
+                            <img class="img-fluid" src="{% static img %}" alt="">
+                        {% endfor %}
                     </div>
                 </div>
             </div>
