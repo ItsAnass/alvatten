@@ -143,7 +143,7 @@
         autoplay: true,
         smartSpeed: 1000,
         loop: true,
-        dots: true,
+        dots: false,
         items: 1
     });
 
