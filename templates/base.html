@@ -52,7 +52,8 @@
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light border-bottom border-2 border-white">
                 <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center">
-                    <img src="{% static 'img/Print.svg' %}" alt="Logo" style="height:160px;width:auto; margin-bottom: 70px;">
+                    <img src="{% static 'img/Print.svg' %}" alt="Logo"
+                        style="height:160px;width:auto; margin-bottom: 70px;">
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
@@ -68,12 +69,15 @@
                         <a href="{% url 'projects' %}"
                             class="nav-item nav-link{% if request.path == '/projects/' %} active{% endif %}">Projects</a>
                         <div class="nav-item dropdown">
-                            <a href="{% url 'services' %}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Tjänster</a>
+                            <a href="{% url 'services' %}" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">Tjänster</a>
                             <div class="dropdown-menu bg-light mt-2">
-                                <a href="{% url 'features' %}" class="dropdown-item">Pooler</a>
-                                <a href="{% url 'team' %}" class="dropdown-item">Spa</a>
-                                <a href="{% url 'testimonial' %}" class="dropdown-item">Vattenfall</a>
-                                <a href="#" class="dropdown-item">Service & Underhåll</a>
+                                <a href="{% url 'pool' %}" class="dropdown-item">Pooler</a>
+                                <a href="{% url 'spa' %}" class="dropdown-item">Spa</a>
+                                <a href="{% url 'fountain' %}" class="dropdown-item">Fontäner</a>
+                                <a href="{% url 'waterfalls' %}" class="dropdown-item">Vattenfall</a>
+                                <a href="{% url 'ponds' %}" class="dropdown-item">Dammar(Konstgjorda vattenmiljöer)</a>
+                                <a href="{% url 'services' %}" class="dropdown-item">Service & Underhåll</a>
                             </div>
                         </div>
                         <a href="{% url 'contact' %}"
@@ -94,28 +98,39 @@
     {% load random_hero_images %}
     <div class="container-fluid pb-4 hero-header bg-light mb-5">
         <div class="container py-3">
-                <div class="row g-5 align-items-center mb-5" style="min-height:1px;">
+            <div class="row g-5 align-items-center mb-5" style="min-height:1px;">
                 <div class="col-lg-6">
                     <h1 class="display-1 mb-4 animated slideInRight">We Make Your <span class="text-primary">Pool</span>
                         Better</h1>
                 </div>
                 <div class="col-lg-6">
-                        <div class="owl-carousel header-carousel animated fadeIn w-100" style="max-width:600px;margin:0 auto;">
-                            {% get_random_hero_images as hero_images %}
-                            {% for img in hero_images %}
-                                <div class="hero-img-wrapper" style="width:100%;aspect-ratio:3/2;max-width:600px;max-height:400px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#e9ecef;">
-                                    <img class="img-fluid" style="width:100%;height:100%;object-fit:cover;" src="{% static img %}" alt="">
-                                </div>
-                            {% endfor %}
+                    <div class="owl-carousel header-carousel animated fadeIn w-100"
+                        style="max-width:600px;margin:0 auto;">
+                        {% get_random_hero_images as hero_images %}
+                        {% for img in hero_images %}
+                        <div class="hero-img-wrapper"
+                            style="width:100%;aspect-ratio:3/2;max-width:600px;max-height:400px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#e9ecef;">
+                            <img class="img-fluid" style="width:100%;height:100%;object-fit:cover;"
+                                src="{% static img %}" alt="">
                         </div>
-                        <div class="custom-hero-arrows d-flex justify-content-center align-items-center mt-3">
-                            <button id="hero-arrow-left" class="btn btn-primary mx-2" title="Previous image" style="border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:2em;">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                            </button>
-                            <button id="hero-arrow-right" class="btn btn-primary mx-2" title="Next image" style="border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:2em;">
-                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"></polyline></svg>
-                            </button>
-                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="custom-hero-arrows d-flex justify-content-center align-items-center mt-3">
+                        <button id="hero-arrow-left" class="btn btn-primary mx-2" title="Previous image"
+                            style="border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:2em;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="15 18 9 12 15 6"></polyline>
+                            </svg>
+                        </button>
+                        <button id="hero-arrow-right" class="btn btn-primary mx-2" title="Next image"
+                            style="border-radius:50%;width:56px;height:56px;display:flex;align-items:center;justify-content:center;font-size:2em;">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="9 6 15 12 9 18"></polyline>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -218,7 +233,7 @@
                             </div>
                         </div>
                         <div class="col-md-6 wow fadeIn" data-wow-delay="0.4s">
-                            <div class="service-item h-100 d-flex bg-light flex-column justify-content-center" >
+                            <div class="service-item h-100 d-flex bg-light flex-column justify-content-center">
                                 <a href="#!" class="service-img position-relative mb-4">
                                     <img class="img-fluid w-100" src="{% static 'img/service-2.jpg' %}" alt="">
                                     <h3>Implement</h3>

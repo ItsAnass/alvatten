@@ -12,5 +12,10 @@ urlpatterns = [
     path('features/', views.FeaturesPageView.as_view(), name='features'),
     path('team/', views.TeamPageView.as_view(), name='team'),
     path('testimonial/', views.TestimonialPageView.as_view(), name='testimonial'),
+    path('pool/', views.PoolPageView.as_view(), name='pool'),
+    path('spa/', views.SpaPageView.as_view(), name='spa'),
+    path('waterfalls/', views.WaterfallsPageView.as_view(), name='waterfalls'),
+    path('fountain/', views.FountainPageView.as_view(), name='fountain'),
+    path('ponds/', views.PondsPageView.as_view(), name='ponds'),
        
 ]

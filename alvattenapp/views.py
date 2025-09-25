@@ -9,11 +9,25 @@ from django.core.mail import EmailMessage
 class HomePageView(TemplateView):
     template_name = "index.html"
 
-    
-
 class AboutPageView(TemplateView):
     template_name = "about.html"
+    
+class PoolPageView(TemplateView):
+    template_name = "pool.html"    
+
+class SpaPageView(TemplateView):
+    template_name = "spa.html"
    
+class WaterfallsPageView(TemplateView):
+    template_name = "waterfalls.html"
+
+class FountainPageView(TemplateView):
+    template_name = "fountain.html"
+
+class PondsPageView(TemplateView):
+    template_name = "ponds.html"
+
+
     
 class ContactPageView(FormView):
     template_name = "contact.html"

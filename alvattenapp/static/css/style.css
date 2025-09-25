@@ -1,3 +1,10 @@
+/* Extra rounded and padded span for Pooler heading */
+.pooler-rounded {
+    border-radius: 1.5em !important;
+    padding-left: 1.7em !important;
+    padding-right: 1.7em !important;
+    display: inline-block;
+}
 /* Project overlay h4 background padding */
 .project-overlay h4.text-white {
     padding: 0.1em 0.3em;
