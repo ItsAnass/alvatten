@@ -2,125 +2,80 @@
 {% load static %}
 {% block title %}Spa{% endblock %}
 
-<body>
-
-
-    {% block content %}
-    <!-- Hero Start -->
-    <div class="container-fluid pb-5 hero-header bg-light mb-5">
-        <div class="container py-5">
-            <div class="row g-3 align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-1 mb-0 animated slideInLeft">Spa</h1>
-                </div>
-
-
+{% block content %}
+<!-- Hero Start -->
+<div class="container-fluid pb-5 hero-header bg-light mb-1">
+    <div class="container py-5">
+        <div class="row g-3 align-items-center">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-1 mb-2 animated slideInLeft">Spa</h1>
+                <p class="lead mb-0">Skräddarsydda spaupplevelser för hem och företag – design, installation och service av jacuzzi, bastu och relaxytor.</p>
             </div>
         </div>
     </div>
-    <!-- Hero End -->
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-5 align-items-stretch">
-                <div class="col-lg-6">
-                    <!-- Pool Gallery Carousel -->
-                    <div id="poolGalleryCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="3000">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{% static 'img/project-1.jpg' %}" class="d-block w-100" style="height: 400px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Pool 1" data-bs-toggle="modal" data-bs-target="#poolGalleryModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{% static 'img/project-2.jpg' %}" class="d-block w-100" style="height: 400px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Pool 2" data-bs-toggle="modal" data-bs-target="#poolGalleryModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{% static 'img/project-3.jpg' %}" class="d-block w-100" style="height: 400px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Pool 3" data-bs-toggle="modal" data-bs-target="#poolGalleryModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{% static 'img/project-4.jpg' %}" class="d-block w-100" style="height: 400px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Pool 4" data-bs-toggle="modal" data-bs-target="#poolGalleryModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{% static 'img/project-5.jpg' %}" class="d-block w-100" style="height: 400px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Pool 5" data-bs-toggle="modal" data-bs-target="#poolGalleryModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{% static 'img/project-6.jpg' %}" class="d-block w-100" style="height: 400px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Pool 6" data-bs-toggle="modal" data-bs-target="#poolGalleryModal">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#poolGalleryCarousel" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#poolGalleryCarousel" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
+</div>
+<!-- Hero End -->
+
+<!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <!-- Image Grid -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/project-1.jpg' %}" alt="">
                     </div>
-                    <!-- Modal Gallery for Pool Images -->
-                    <div class="modal fade" id="poolGalleryModal" tabindex="-1" aria-labelledby="poolGalleryModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-xl modal-dialog-centered">
-                            <div class="modal-content" style="background:#d9dcd6;">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="poolGalleryModalLabel">Pool Gallery</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <div id="poolModalGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                            <button type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                            <button type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                            <button type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                            <button type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                                        </div>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="{% static 'img/project-1.jpg' %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Pool 1">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="{% static 'img/project-2.jpg' %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Pool 2">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="{% static 'img/project-3.jpg' %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Pool 3">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="{% static 'img/project-4.jpg' %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Pool 4">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="{% static 'img/project-5.jpg' %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Pool 5">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="{% static 'img/project-6.jpg' %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Pool 6">
-                                            </div>
-                                        </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/project-2.jpg' %}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/project-3.jpg' %}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/project-4.jpg' %}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/project-5.jpg' %}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/project-6.jpg' %}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/about-1.jpg' %}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/about-2.jpg' %}" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div style="margin-left: 32px;">
-                        <h1 class="mb-5"><span class="text-primary bg-light px-2 pooler-rounded">Spa</span></h1>
-                        <div style="margin-left: 32px;">
-                            <p class="mb-4">
-                                Vi erbjuder skräddarsydda spaupplevelser för hem och kommersiella miljöer. Våra lösningar inkluderar design och installation av jacuzzi (friliggande eller integrerad med pool), bastu, ångbad och relaxytor – för en lyxig och avkopplande miljö, både inomhus och utomhus.
-                            </p>
+            </div>
+            <!-- Text Card -->
+            <div class="col-lg-6 d-flex align-items-stretch">
+                <div class="bg-light shadow-sm d-flex flex-column justify-content-center w-100" style="padding: 2.5rem; max-width: 540px; min-height: 540px; border-radius: 32px; overflow: hidden;">
+                    <h2 class="mb-4"><span class="text-uppercase text-primary bg-light px-2">Spa & Relax</span></h2>
+                    <p class="mb-3">
+                        Vi erbjuder helhetslösningar för spa och relax – från design och installation av jacuzzi, bastu och ångbad till exklusiva relaxytor. Våra lösningar passar både hem och kommersiella miljöer.
+                    </p>
+                    <p class="mb-3">
+                        Varje projekt anpassas efter dina önskemål och platsens förutsättningar. Vi kombinerar modern teknik, hög kvalitet och stilren design för att skapa en lyxig och avkopplande miljö.
+                    </p>
+                    <p class="mb-4">
+                        Vi erbjuder även service och underhåll för att din spa-upplevelse alltid ska vara problemfri och njutbar.
+                    </p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Jacuzzi & Bastu</h6>
+                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Relaxytor</h6>
+                        </div>
+                        <div class="col-sm-6 mb-3 mb-sm-0">
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Design & Installation</h6>
+                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Service & Underhåll</h6>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
-    {% endblock %}
-
-</body>
+</div>
+<!-- About End -->
+{% endblock %}
