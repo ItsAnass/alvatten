@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block title %}Projects{% endblock %}
+{% block title %}Projekt{% endblock %}
 
 <body>
 
@@ -12,7 +12,7 @@
         <div class="container py-5">
             <div class="row g-3 align-items-center">
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-1 mb-0 animated slideInLeft">Projects</h1>
+                    <h1 class="display-1 mb-0 animated slideInLeft">Projekt</h1>
                 </div>
             </div>
         </div>
@@ -25,9 +25,9 @@
             <div class="row g-0">
                 <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
                     <div class="d-flex flex-column justify-content-center bg-primary h-100 p-5">
-                        <h1 class="text-white mb-5">Our Latest <span
-                                class="text-uppercase text-primary bg-light px-2">Projects</span></h1>
-                        <h4 class="text-white mb-0"><span class="display-1">6</span> of our latest projects</h4>
+            <h1 class="text-white mb-5">Våra senaste <span
+                class="text-uppercase text-primary bg-light px-2">projekt</span></h1>
+            <h4 class="text-white mb-0"><span class="display-1">6</span> av våra senaste projekt</h4>
                     </div>
                 </div>
                 <div class="col-lg-7">
@@ -37,7 +37,7 @@
                                 <img class="img-fluid w-100" src="{% static 'img/project-1.jpg' %}" alt="">
                                     <div class="d-none project-images" data-images="{% static 'img/project-1.jpg' %},{% static 'img/project-2.jpg' %},{% static 'img/project-3.jpg' %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
-                                    <h4 class="text-white">Kitchen</h4>
+                                    <h4 class="text-white">Kök</h4>
                                    
                                 </a>
                             </div>
@@ -47,7 +47,7 @@
                                 <img class="img-fluid w-100" src="{% static 'img/project-2.jpg' %}" alt="">
                                     <div class="d-none project-images" data-images="{% static 'img/project-2.jpg' %},{% static 'img/project-4.jpg' %},{% static 'img/project-5.jpg' %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
-                                    <h4 class="text-white">Bathroom</h4>
+                                    <h4 class="text-white">Badrum</h4>
                                     
                                 </a>
                             </div>
@@ -57,7 +57,7 @@
                                 <img class="img-fluid w-100" src="{% static 'img/project-3.jpg' %}" alt="">
                                     <div class="d-none project-images" data-images="{% static 'img/project-3.jpg' %},{% static 'img/project-6.jpg' %},{% static 'img/project-1.jpg' %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
-                                    <h4 class="text-white">Bedroom</h4>
+                                    <h4 class="text-white">Sovrum</h4>
                                    
                                 </a>
                             </div>
@@ -67,7 +67,7 @@
                                 <img class="img-fluid w-100" src="{% static 'img/project-4.jpg' %}" alt="">
                                     <div class="d-none project-images" data-images="{% static 'img/project-4.jpg' %},{% static 'img/project-2.jpg' %},{% static 'img/project-5.jpg' %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
-                                    <h4 class="text-white">Living Room</h4>
+                                    <h4 class="text-white">Vardagsrum</h4>
                                     
                                 </a>
                             </div>
@@ -77,7 +77,7 @@
                                 <img class="img-fluid w-100" src="{% static 'img/project-5.jpg' %}" alt="">
                                     <div class="d-none project-images" data-images="{% static 'img/project-5.jpg' %},{% static 'img/project-3.jpg' %},{% static 'img/project-6.jpg' %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
-                                    <h4 class="text-white">Furniture</h4>
+                                    <h4 class="text-white">Möbler</h4>
                                     
                                 </a>
                             </div>
@@ -87,7 +87,7 @@
                                 <img class="img-fluid w-100" src="{% static 'img/project-6.jpg' %}" alt="">
                                     <div class="d-none project-images" data-images="{% static 'img/project-6.jpg' %},{% static 'img/project-1.jpg' %},{% static 'img/project-4.jpg' %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
-                                    <h4 class="text-white">Rennovation</h4>
+                                    <h4 class="text-white">Renovering</h4>
                                     
                                 </a>
                             </div>
@@ -104,8 +104,8 @@
             <div class="modal-dialog modal-xl modal-dialog-centered">
                 <div class="modal-content" style="background:#d9dcd6;">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="projectModalLabel">Project Gallery</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        <h5 class="modal-title" id="projectModalLabel">Projektgalleri</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Stäng"></button>
                     </div>
                     <div class="modal-body">
                         <div id="modalGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
@@ -115,11 +115,11 @@
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#modalGalleryCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
+                                <span class="visually-hidden">Föregående</span>
                             </button>
                             <button class="carousel-control-next" type="button" data-bs-target="#modalGalleryCarousel" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
+                                <span class="visually-hidden">Nästa</span>
                             </button>
                         </div>
                     </div>
