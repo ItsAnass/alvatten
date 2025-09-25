@@ -2,111 +2,83 @@
 {% load static %}
 {% block title %}Om oss{% endblock %}
 
-<body>
-
-
-    {% block content %}
-    <!-- Hero Start -->
-    <div class="container-fluid pb-5 hero-header bg-light mb-1">
-        <div class="container py-5">
-            <div class="row g-3 align-items-center">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-1 mb-0 animated slideInLeft">Om oss</h1>
-                </div>
-
-
+{% block content %}
+<!-- Hero Start -->
+<div class="container-fluid pb-5 hero-header bg-light mb-1">
+    <div class="container py-5">
+        <div class="row g-3 align-items-center">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-1 mb-2 animated slideInLeft">Om oss</h1>
+                <p class="lead mb-0">Vi skapar och underhåller vattenmiljöer med passion, kvalitet och över 25 års erfarenhet.</p>
             </div>
         </div>
     </div>
-    <!-- Hero End -->
-    <!-- About Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-5 align-items-stretch">
-                <div class="col-lg-6">
-                    <div class="row mb-2">
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.05s">
-                            <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/project-5.jpg' %}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
-                            <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/project-6.jpg' %}" alt="">
-                            </div>
-                        </div>
+</div>
+<!-- Hero End -->
+
+<!-- About Start -->
+<div class="container-fluid py-5">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <!-- Image Grid -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/project-5.jpg' %}" alt="">
                     </div>
-                    <div class="row mb-2">
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.12s">
-                            <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/project-1.jpg' %}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.14s">
-                            <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/project-2.jpg' %}" alt="">
-                            </div>
-                        </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/project-6.jpg' %}" alt="">
                     </div>
-                    <div class="row mb-2">
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.16s">
-                            <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/project-3.jpg' %}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.18s">
-                            <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/project-4.jpg' %}" alt="">
-                            </div>
-                        </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/project-1.jpg' %}" alt="">
                     </div>
-                    <div class="row">
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.15s">
-                            <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/about-1.jpg' %}" alt="">
-                            </div>
-                        </div>
-                        <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
-                            <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/about-2.jpg' %}" alt="">
-                            </div>
-                        </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/project-2.jpg' %}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/project-3.jpg' %}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/project-4.jpg' %}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/about-1.jpg' %}" alt="">
+                    </div>
+                    <div class="col-6">
+                        <img class="img-fluid w-100 rounded-4 mb-2" style="aspect-ratio: 4/3; object-fit: cover;" src="{% static 'img/about-2.jpg' %}" alt="">
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="mb-5"><span class="text-uppercase text-primary bg-light px-2">History</span> of Our
-                        Creation</h1>
-                    <p class="mb-4">
-                        For more than 25 years, our company has been at the forefront of water construction, specializing in the creation and maintenance of pools, fountains, and a diverse range of water features. Our story began with a vision to transform outdoor and indoor spaces into vibrant, relaxing, and inspiring environments through the beauty of water. Over the decades, we have grown from a small team of passionate craftsmen into a leading name in the industry, trusted by homeowners, businesses, and municipalities alike.
+            </div>
+            <!-- Text Card -->
+            <div class="col-lg-6">
+                <div class="bg-light rounded-4 shadow-sm p-4 p-lg-5">
+                    <h2 class="mb-4"><span class="text-uppercase text-primary bg-light px-2">Vår Historia</span></h2>
+                    <p class="mb-3">
+                        I över 25 år har vi varit ledande inom vattenbyggnation och underhåll av pooler, fontäner och vattenmiljöer. Vår resa började med en vision om att skapa inspirerande och avkopplande miljöer med vatten som central punkt. Idag är vi ett etablerat namn som anlitas av både privatpersoner, företag och kommuner.
+                    </p>
+                    <p class="mb-3">
+                        Vi erbjuder helhetslösningar – från design och byggnation av exklusiva pooler och fontäner till innovativa vatteninstallationer och löpande service. Varje projekt präglas av kreativitet, teknisk precision och ett starkt kundfokus.
+                    </p>
+                    <p class="mb-3">
+                        Vårt erfarna team säkerställer att varje anläggning håller högsta kvalitet, funktion och estetik – år efter år. Vi arbetar med de senaste teknikerna och hållbara metoder för att skapa långsiktiga och miljövänliga lösningar.
                     </p>
                     <p class="mb-4">
-                        Our expertise spans the entire spectrum of water construction. We have designed and built luxurious swimming pools for private residences, elegant fountains for public parks and commercial spaces, and innovative water installations that serve as the centerpiece of architectural projects. Each project is approached with creativity, technical precision, and a commitment to exceeding our clients’ expectations.
-                    </p>
-                    <p class="mb-4">
-                        Beyond construction, we offer comprehensive maintenance services to ensure that every pool, fountain, and water feature remains in pristine condition year after year. Our experienced technicians use the latest techniques and equipment to provide reliable, efficient, and cost-effective care, giving our clients peace of mind and lasting enjoyment.
-                    </p>
-                    <p class="mb-4">
-                        Throughout our history, we have embraced new technologies and sustainable practices, always striving to deliver solutions that are not only beautiful but also environmentally responsible. Our long-standing relationships with clients and partners are a testament to our integrity, professionalism, and dedication to quality.
-                    </p>
-                    <p class="mb-4">
-                        As we look to the future, we remain committed to innovation, excellence, and the timeless appeal of water in design. Whether you are dreaming of a custom pool, a dramatic fountain, or a unique water feature, you can trust our team to bring your vision to life with skill, passion, and over a quarter-century of experience.
+                        Oavsett om du drömmer om en skräddarsydd pool, en dramatisk fontän eller en unik vattenmiljö kan du lita på vår kompetens, passion och långa erfarenhet.
                     </p>
                     <div class="row g-3">
                         <div class="col-sm-6">
-                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Acurecy</h6>
-                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Professional Staff</h6>
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Erfarenhet & Kvalitet</h6>
+                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Professionell Personal</h6>
                         </div>
-                        <div class="col-sm-6 mb-5">
+                        <div class="col-sm-6 mb-3 mb-sm-0">
                             <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>24/7 Support</h6>
-                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Fair Prices</h6>
+                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Rättvisa Priser</h6>
                         </div>
-                       
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
-    {% endblock %}
-
-</body>
+</div>
+<!-- About End -->
+{% endblock %}
