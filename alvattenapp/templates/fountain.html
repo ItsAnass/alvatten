@@ -22,35 +22,34 @@
     <!-- About Start -->
     <div class="container-fluid py-5">
         <div class="container">
-            <div class="row g-5 align-items-stretch">
-                <div class="col-lg-6">
-                    <!-- Pool Gallery Carousel -->
-                    <div id="poolGalleryCarousel" class="carousel slide mb-4" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 d-flex align-items-stretch">
+                    <div id="fountainGalleryCarousel" class="carousel slide mb-4 w-100" data-bs-ride="carousel" data-bs-interval="3000">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{% static 'img/project-1.jpg' %}" class="d-block w-100" style="height: 400px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Pool 1" data-bs-toggle="modal" data-bs-target="#poolGalleryModal">
+                                <img src="{% static 'img/project-1.jpg' %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain 1" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
                             </div>
                             <div class="carousel-item">
-                                <img src="{% static 'img/project-2.jpg' %}" class="d-block w-100" style="height: 400px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Pool 2" data-bs-toggle="modal" data-bs-target="#poolGalleryModal">
+                                <img src="{% static 'img/project-2.jpg' %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain 2" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
                             </div>
                             <div class="carousel-item">
-                                <img src="{% static 'img/project-3.jpg' %}" class="d-block w-100" style="height: 400px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Pool 3" data-bs-toggle="modal" data-bs-target="#poolGalleryModal">
+                                <img src="{% static 'img/project-3.jpg' %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain 3" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
                             </div>
                             <div class="carousel-item">
-                                <img src="{% static 'img/project-4.jpg' %}" class="d-block w-100" style="height: 400px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Pool 4" data-bs-toggle="modal" data-bs-target="#poolGalleryModal">
+                                <img src="{% static 'img/project-4.jpg' %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain 4" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
                             </div>
                             <div class="carousel-item">
-                                <img src="{% static 'img/project-5.jpg' %}" class="d-block w-100" style="height: 400px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Pool 5" data-bs-toggle="modal" data-bs-target="#poolGalleryModal">
+                                <img src="{% static 'img/project-5.jpg' %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain 5" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
                             </div>
                             <div class="carousel-item">
-                                <img src="{% static 'img/project-6.jpg' %}" class="d-block w-100" style="height: 400px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Pool 6" data-bs-toggle="modal" data-bs-target="#poolGalleryModal">
+                                <img src="{% static 'img/project-6.jpg' %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain 6" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#poolGalleryCarousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#fountainGalleryCarousel" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#poolGalleryCarousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#fountainGalleryCarousel" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
@@ -107,13 +106,27 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <div style="margin-left: 32px;">
-                        <h1 class="mb-5"><span class="text-primary bg-light px-2 pooler-rounded">Fontäner</span></h1>
-                        <div style="margin-left: 32px;">
-                            <p class="mb-4">
-                                Vi har stor erfarenhet av att designa och bygga alla typer av fontäner, vare sig de är stora eller små, dansande, utomhus eller inomhus, i hotell, trädgårdar eller hem. Vi kan förverkliga vilken design du än har i åtanke, eller erbjuda vår rådgivning för att hjälpa dig att välja den perfekta utformningen.
-                            </p>
+                <div class="col-lg-6 d-flex align-items-stretch">
+                    <div class="bg-light shadow-sm d-flex flex-column w-100" style="padding: 2.5rem; max-width: 540px; min-height: 540px; border-radius: 32px; overflow: hidden; text-align: left;">
+                        <h2 class="mb-4"><span class="text-uppercase text-primary bg-light px-2">Fontäner</span></h2>
+                        <p class="mb-3">
+                            Vi erbjuder helhetslösningar för fontäner – från design och installation till service och underhåll. Oavsett om det gäller privata trädgårdar, offentliga miljöer eller företag, skapar vi fontäner som passar din stil och platsens förutsättningar.
+                        </p>
+                        <p class="mb-3">
+                            Vårt team kombinerar kreativitet och teknisk expertis för att leverera både klassiska och moderna fontänlösningar. Vi hjälper dig från idé till färdig fontän och ser till att allt fungerar smidigt och hållbart.
+                        </p>
+                        <p class="mb-4">
+                            Kontakta oss för rådgivning eller offert – vi hjälper dig att förverkliga din fontändröm!
+                        </p>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Design & Installation</h6>
+                                <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Inomhus & Utomhus</h6>
+                            </div>
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                                <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Service & Underhåll</h6>
+                                <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Kreativa Lösningar</h6>
+                            </div>
                         </div>
                     </div>
                 </div>
