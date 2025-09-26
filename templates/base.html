@@ -13,6 +13,7 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
     {% load static %}
+    {% load random_about_images %}
     <!-- Favicon -->
     <link href="{% static 'img/favicon.ico' %}" rel="icon">
 
@@ -104,10 +105,10 @@
                         bättre</h1>
                 </div>
                 <div class="col-lg-6">
+                    {% get_random_about_images 20 as hero_gallery_images %}
                     <div class="owl-carousel header-carousel animated fadeIn w-100"
                         style="max-width:600px;margin:0 auto;">
-                        {% get_random_hero_images as hero_images %}
-                        {% for img in hero_images %}
+                        {% for img in hero_gallery_images|slice:":20" %}
                         <div class="hero-img-wrapper"
                             style="width:100%;aspect-ratio:3/2;max-width:600px;max-height:400px;display:flex;align-items:center;justify-content:center;overflow:hidden;background:#e9ecef;">
                             <img class="img-fluid" style="width:100%;height:100%;object-fit:cover;"

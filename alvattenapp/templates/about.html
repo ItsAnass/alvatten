@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load random_about_images %}
 {% block title %}Om oss{% endblock %}
 
 <body>
@@ -24,51 +25,52 @@
         <div class="container">
             <div class="row g-5 align-items-stretch">
                 <div class="col-lg-6">
+                    {% get_random_about_images 20 as about_images %}
                     <div class="row mb-2">
                         <div class="col-6 wow fadeIn" data-wow-delay="0.05s">
                             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/project-5.jpg' %}" alt="">
+                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static about_images.0 %}" alt="">
                             </div>
                         </div>
                         <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
                             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/project-6.jpg' %}" alt="">
+                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static about_images.1 %}" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="row mb-2">
                         <div class="col-6 wow fadeIn" data-wow-delay="0.12s">
                             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/project-1.jpg' %}" alt="">
+                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static about_images.2 %}" alt="">
                             </div>
                         </div>
                         <div class="col-6 wow fadeIn" data-wow-delay="0.14s">
                             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/project-2.jpg' %}" alt="">
+                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static about_images.3 %}" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="row mb-2">
                         <div class="col-6 wow fadeIn" data-wow-delay="0.16s">
                             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/project-3.jpg' %}" alt="">
+                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static about_images.4 %}" alt="">
                             </div>
                         </div>
                         <div class="col-6 wow fadeIn" data-wow-delay="0.18s">
                             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/project-4.jpg' %}" alt="">
+                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static about_images.5 %}" alt="">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-6 wow fadeIn" data-wow-delay="0.15s">
                             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/about-1.jpg' %}" alt="">
+                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static about_images.6 %}" alt="">
                             </div>
                         </div>
                         <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
                             <div style="aspect-ratio: 4/3; width: 100%; overflow: hidden;">
-                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static 'img/about-2.jpg' %}" alt="">
+                                <img class="img-fluid w-100 h-100 object-fit-cover" style="aspect-ratio: 4/3; width: 100%; height: 180px; object-fit: cover; border-radius: 12px;" src="{% static about_images.7 %}" alt="">
                             </div>
                         </div>
                     </div>
