@@ -25,7 +25,9 @@
             <div class="col-12 text-center">
                 <h2 class="mb-4">Underhåll & Service för Alla Vattenanläggningar</h2>
                 <p style="font-size:1.2em; max-width:700px; margin:0 auto;">
-                    Vi erbjuder professionellt underhåll och service för pooler, spa, fontäner, vattenfall och andra vattenanläggningar. Vårt team ser till att din anläggning alltid är i toppskick – året runt, utan bekymmer.
+                    Vi erbjuder professionellt underhåll och service för pooler, spa, fontäner, vattenfall och andra
+                    vattenanläggningar. Vårt team ser till att din anläggning alltid är i toppskick – året runt, utan
+                    bekymmer.
                 </p>
             </div>
         </div>
@@ -36,21 +38,27 @@
             <div class="carousel-inner">
                 {% for img in service_images %}
                 <div class="carousel-item{% if forloop.first %} active{% endif %}">
-                    <img src="{% static img %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Servicebild {{ forloop.counter }}" data-bs-toggle="modal" data-bs-target="#serviceGalleryModal">
+                    <img src="{% static img %}" class="d-block w-100"
+                        style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;"
+                        alt="Servicebild {{ forloop.counter }}" data-bs-toggle="modal"
+                        data-bs-target="#serviceGalleryModal">
                 </div>
                 {% endfor %}
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#serviceGalleryCarousel" data-bs-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#serviceGalleryCarousel"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Föregående</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#serviceGalleryCarousel" data-bs-slide="next">
+            <button class="carousel-control-next" type="button" data-bs-target="#serviceGalleryCarousel"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Nästa</span>
             </button>
         </div>
         <!-- Modal Gallery for Service Images -->
-        <div class="modal fade" id="serviceGalleryModal" tabindex="-1" aria-labelledby="serviceGalleryModalLabel" aria-hidden="true">
+        <div class="modal fade" id="serviceGalleryModal" tabindex="-1" aria-labelledby="serviceGalleryModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-xl modal-dialog-centered">
                 <div class="modal-content" style="background:#d9dcd6;">
                     <div class="modal-header">
@@ -61,21 +69,29 @@
                         <div id="serviceModalGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-indicators">
                                 {% for img in service_images %}
-                                <button type="button" data-bs-target="#serviceModalGalleryCarousel" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="{% if forloop.first %}true{% endif %}" aria-label="Slide {{ forloop.counter }}"></button>
+                                <button type="button" data-bs-target="#serviceModalGalleryCarousel"
+                                    data-bs-slide-to="{{ forloop.counter0 }}"
+                                    class="{% if forloop.first %}active{% endif %}"
+                                    aria-current="{% if forloop.first %}true{% endif %}"
+                                    aria-label="Slide {{ forloop.counter }}"></button>
                                 {% endfor %}
                             </div>
                             <div class="carousel-inner">
                                 {% for img in service_images %}
                                 <div class="carousel-item{% if forloop.first %} active{% endif %}">
-                                    <img src="{% static img %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Servicebild {{ forloop.counter }}">
+                                    <img src="{% static img %}" class="d-block w-100"
+                                        style="height: 700px; object-fit: cover; border-radius: 18px; border: none;"
+                                        alt="Servicebild {{ forloop.counter }}">
                                 </div>
                                 {% endfor %}
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#serviceModalGalleryCarousel" data-bs-slide="prev">
+                            <button class="carousel-control-prev" type="button"
+                                data-bs-target="#serviceModalGalleryCarousel" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Föregående</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#serviceModalGalleryCarousel" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button"
+                                data-bs-target="#serviceModalGalleryCarousel" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Nästa</span>
                             </button>
@@ -93,42 +109,51 @@
                 <div class="card h-100 shadow-sm border-0 rounded-4 p-3 text-center">
                     <div class="mb-3"><i class="fa fa-swimming-pool fa-2x text-primary"></i></div>
                     <h5 class="mb-2">Poolunderhåll</h5>
-                    <p class="mb-0">Regelbunden kontroll av vattenkvalitet, rengöring av filter, teknisk genomgång och säsongsförberedelser. Din pool är alltid ren, säker och redo att användas.</p>
+                    <p class="mb-0">Regelbunden kontroll av vattenkvalitet, rengöring av filter, teknisk genomgång och
+                        säsongsförberedelser. Din pool är alltid ren, säker och redo att användas.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4">
                 <div class="card h-100 shadow-sm border-0 rounded-4 p-3 text-center">
-                    <div class="mb-3"><i class="fa fa-fountain fa-2x text-primary"></i></div>
-                    <h5 class="mb-2">Fontäner</h5>
-                    <p class="mb-0">Rengöring, vattenbalans, pumpservice och vinterförberedelser för alla typer av fontäner – både privata och offentliga.</p>
+                    <div class="mb-3">
+                        <i class="fa fa-tint fa-2x text-primary"></i>
+                    </div>
+                    <h5 class="mb-2 d-flex align-items-center justify-content-center" style="gap:0.5em;"> Fontäner
+                    </h5>
+                    <p class="mb-0">Rengöring, vattenbalans, pumpservice och vinterförberedelser för alla typer av
+                        fontäner – både privata och offentliga.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4">
                 <div class="card h-100 shadow-sm border-0 rounded-4 p-3 text-center">
                     <div class="mb-3"><i class="fa fa-water fa-2x text-primary"></i></div>
                     <h5 class="mb-2">Vattenfall & Dammar</h5>
-                    <p class="mb-0">Underhåll av vattenfall, dammar och konstgjorda vattenmiljöer. Vi säkerställer optimal funktion och ett vackert utseende.</p>
+                    <p class="mb-0">Underhåll av vattenfall, dammar och konstgjorda vattenmiljöer. Vi säkerställer
+                        optimal funktion och ett vackert utseende.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4">
                 <div class="card h-100 shadow-sm border-0 rounded-4 p-3 text-center">
                     <div class="mb-3"><i class="fa fa-hot-tub fa-2x text-primary"></i></div>
                     <h5 class="mb-2">Spa & Relax</h5>
-                    <p class="mb-0">Service och underhåll av spa, jacuzzi och relaxytor. Vi ser till att din spaupplevelse alltid är avkopplande och problemfri.</p>
+                    <p class="mb-0">Service och underhåll av spa, jacuzzi och relaxytor. Vi ser till att din
+                        spaupplevelse alltid är avkopplande och problemfri.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4">
                 <div class="card h-100 shadow-sm border-0 rounded-4 p-3 text-center">
                     <div class="mb-3"><i class="fa fa-tools fa-2x text-primary"></i></div>
                     <h5 class="mb-2">Teknisk Service</h5>
-                    <p class="mb-0">Felsökning, reparation och uppgradering av teknisk utrustning för alla typer av vattenanläggningar.</p>
+                    <p class="mb-0">Felsökning, reparation och uppgradering av teknisk utrustning för alla typer av
+                        vattenanläggningar.</p>
                 </div>
             </div>
             <div class="col-md-4 col-lg-4">
                 <div class="card h-100 shadow-sm border-0 rounded-4 p-3 text-center">
                     <div class="mb-3"><i class="fa fa-cogs fa-2x text-primary"></i></div>
                     <h5 class="mb-2">Skräddarsydda Lösningar</h5>
-                    <p class="mb-0">Vi anpassar våra tjänster efter dina behov – oavsett om det gäller pool, spa, fontän, vattenfall eller annan vatteninstallation.</p>
+                    <p class="mb-0">Vi anpassar våra tjänster efter dina behov – oavsett om det gäller pool, spa,
+                        fontän, vattenfall eller annan vatteninstallation.</p>
                 </div>
             </div>
         </div>
