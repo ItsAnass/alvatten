@@ -32,23 +32,25 @@
                 </div>
                 <div class="col-lg-7">
                     <div class="row g-0" id="project-gallery">
+                        {% load random_infinity_images %}
+                        {% get_infinity_images as infinity_images %}
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.2s">
                             <div class="project-item position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'img/project-1.jpg' %}" alt="">
-                                    <div class="d-none project-images" data-images="{% static 'img/project-1.jpg' %},{% static 'img/project-2.jpg' %},{% static 'img/project-3.jpg' %}"></div>
+                                <img class="img-fluid w-100" src="{% static infinity_images.0 %}" alt="Infinity">
+                                <div class="d-none project-images" data-images="{% for img in infinity_images|slice:':6' %}{% static img %}{% if not forloop.last %},{% endif %}{% endfor %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
                                     <h4 class="text-white">Infinity</h4>
-                                   
                                 </a>
                             </div>
                         </div>
+                        {% load random_skimmer_images %}
+                        {% get_skimmer_images as skimmer_images %}
                         <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
                             <div class="project-item position-relative overflow-hidden">
-                                <img class="img-fluid w-100" src="{% static 'img/project-2.jpg' %}" alt="">
-                                    <div class="d-none project-images" data-images="{% static 'img/project-2.jpg' %},{% static 'img/project-4.jpg' %},{% static 'img/project-5.jpg' %}"></div>
+                                <img class="img-fluid w-100" src="{% static skimmer_images.0 %}" alt="Skimmer">
+                                <div class="d-none project-images" data-images="{% for img in skimmer_images|slice:':6' %}{% static img %}{% if not forloop.last %},{% endif %}{% endfor %}"></div>
                                 <a class="project-overlay text-decoration-none" href="#">
                                     <h4 class="text-white">skimmer</h4>
-                                    
                                 </a>
                             </div>
                         </div>
