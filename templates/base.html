@@ -319,6 +319,19 @@
 
     <!-- Template Javascript -->
     <script src="{% static 'js/main.js' %}"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var navbarCollapse = document.getElementById('navbarCollapse');
+        if (navbarCollapse) {
+            navbarCollapse.addEventListener('show.bs.collapse', function () {
+                document.body.classList.add('navbar-open');
+            });
+            navbarCollapse.addEventListener('hide.bs.collapse', function () {
+                document.body.classList.remove('navbar-open');
+            });
+        }
+    });
+    </script>
 
     <html lang="en">
     <!-- Hero Gallery Modal (Bootstrap 5) -->

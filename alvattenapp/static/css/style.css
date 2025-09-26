@@ -1,3 +1,13 @@
+@media (max-width: 991.98px) {
+    body.navbar-open .hero-header {
+    margin-top: 10px !important;
+    }
+}
+@media (max-width: 991.98px) {
+    .navbar-collapse.show ~ .hero-header {
+        margin-top: 120px !important;
+    }
+}
 /* Extra rounded and padded span for Pooler heading */
 .pooler-rounded {
     border-radius: 1.5em !important;
