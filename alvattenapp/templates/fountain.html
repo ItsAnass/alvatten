@@ -23,81 +23,54 @@
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 d-flex align-items-stretch">
+                    {% load random_fountain_images %}
+                    {% get_random_fountain_images as fountain_images %}
                     <div id="fountainGalleryCarousel" class="carousel slide mb-4 w-100" data-bs-ride="carousel" data-bs-interval="3000">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="{% static 'img/project-1.jpg' %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain 1" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
+                            {% for img in fountain_images|slice:":15" %}
+                            <div class="carousel-item{% if forloop.first %} active{% endif %}">
+                                <img src="{% static img %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain {{ forloop.counter }}" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
                             </div>
-                            <div class="carousel-item">
-                                <img src="{% static 'img/project-2.jpg' %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain 2" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{% static 'img/project-3.jpg' %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain 3" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{% static 'img/project-4.jpg' %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain 4" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{% static 'img/project-5.jpg' %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain 5" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="{% static 'img/project-6.jpg' %}" class="d-block w-100" style="height: 350px; object-fit: cover; cursor:pointer; border-radius: 18px; border: 4px solid #C1BAA1;" alt="Fountain 6" data-bs-toggle="modal" data-bs-target="#fountainGalleryModal">
-                            </div>
+                            {% endfor %}
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#fountainGalleryCarousel" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
+                            <span class="visually-hidden">Föregående</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#fountainGalleryCarousel" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
+                            <span class="visually-hidden">Nästa</span>
                         </button>
                     </div>
-                    <!-- Modal Gallery for Pool Images -->
-                    <div class="modal fade" id="poolGalleryModal" tabindex="-1" aria-labelledby="poolGalleryModalLabel" aria-hidden="true">
+                    <!-- Modal Gallery for Fountain Images -->
+                    <div class="modal fade" id="fountainGalleryModal" tabindex="-1" aria-labelledby="fountainGalleryModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-xl modal-dialog-centered">
                             <div class="modal-content" style="background:#d9dcd6;">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="poolGalleryModalLabel">Pool Gallery</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <h5 class="modal-title" id="fountainGalleryModalLabel">Fontängalleri</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Stäng"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <div id="poolModalGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div id="fountainModalGalleryCarousel" class="carousel slide" data-bs-ride="carousel">
                                         <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                            <button type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                            <button type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                            <button type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                            <button type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                            {% for img in fountain_images|slice:":15" %}
+                                            <button type="button" data-bs-target="#fountainModalGalleryCarousel" data-bs-slide-to="{{ forloop.counter0 }}" class="{% if forloop.first %}active{% endif %}" aria-current="{% if forloop.first %}true{% endif %}" aria-label="Slide {{ forloop.counter }}"></button>
+                                            {% endfor %}
                                         </div>
                                         <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="{% static 'img/project-1.jpg' %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Pool 1">
+                                            {% for img in fountain_images|slice:":15" %}
+                                            <div class="carousel-item{% if forloop.first %} active{% endif %}">
+                                                <img src="{% static img %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Fountain {{ forloop.counter }}">
                                             </div>
-                                            <div class="carousel-item">
-                                                <img src="{% static 'img/project-2.jpg' %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Pool 2">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="{% static 'img/project-3.jpg' %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Pool 3">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="{% static 'img/project-4.jpg' %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Pool 4">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="{% static 'img/project-5.jpg' %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Pool 5">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="{% static 'img/project-6.jpg' %}" class="d-block w-100" style="height: 700px; object-fit: cover; border-radius: 18px; border: none;" alt="Pool 6">
-                                            </div>
+                                            {% endfor %}
                                         </div>
-                                        <button class="carousel-control-prev" type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide="prev">
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#fountainModalGalleryCarousel" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
+                                            <span class="visually-hidden">Föregående</span>
                                         </button>
-                                        <button class="carousel-control-next" type="button" data-bs-target="#poolModalGalleryCarousel" data-bs-slide="next">
+                                        <button class="carousel-control-next" type="button" data-bs-target="#fountainModalGalleryCarousel" data-bs-slide="next">
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
+                                            <span class="visually-hidden">Nästa</span>
                                         </button>
                                     </div>
                                 </div>
