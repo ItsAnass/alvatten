@@ -104,7 +104,6 @@
 }
 
 .navbar {
-    padding: 15px 0;
     font-family: "Space Grotesk", sans-serif;
     font-size: 18px;
 }
@@ -167,7 +166,7 @@
 
 /*** Hero Header ***/
 .hero-header {
-    margin-top: -100px;
+    
     padding-top: 30px;
     background-size: cover;
 }

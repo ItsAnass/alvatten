@@ -54,7 +54,7 @@
             <nav class="navbar navbar-expand-lg navbar-light">
                 <a href="{% url 'home' %}" class="navbar-brand d-flex align-items-center">
                     <img src="{% static 'img/Print.svg' %}" alt="Logo"
-                        style="height:160px;width:auto; margin-bottom: 80px;">
+                        style="height:160px;width:auto;">
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
@@ -186,86 +186,22 @@
     </div>
     <!-- Feature End -->
 
-
-    
-
-
-
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5">
-        <div class="container py-5">
-            <div class="row justify-content-center">
-                <div class="col-md-12 col-lg-9">
-                    <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.2s">
-                        <div class="testimonial-item">
-                            <div class="row g-5 align-items-center">
-                                <div class="col-md-6">
-                                    <div class="testimonial-img">
-                                        <img class="img-fluid" src="{% static 'img/testimonial/testimonial-1.jpg' %}" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="testimonial-text pb-5 pb-md-0">
-                                        <h3>Hållbara material</h3>
-                                        <p>Vi använder endast material av högsta kvalitet och med fokus på hållbarhet och miljö.</p>
-                                        <h5 class="mb-0">Boris Johnson</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <div class="row g-5 align-items-center">
-                                <div class="col-md-6">
-                                    <div class="testimonial-img">
-                                        <img class="img-fluid" src="{% static 'img/testimonial/testimonial-2.jpg' %}" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="testimonial-text pb-5 pb-md-0">
-                                        <h3>Kundnöjdhet</h3>
-                                        <p>Våra kunder uppskattar vårt engagemang, vår service och våra skräddarsydda lösningar.</p>
-                                        <h5 class="mb-0">Alexander Bell</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="testimonial-item">
-                            <div class="row g-5 align-items-center">
-                                <div class="col-md-6">
-                                    <div class="testimonial-img">
-                                        <img class="img-fluid" src="{% static 'img/testimonial/testimonial-3.jpg' %}" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="testimonial-text pb-5 pb-md-0">
-                                        <h3>Prisvärda lösningar</h3>
-                                        <p>Vi erbjuder alltid prisvärda och flexibla lösningar för alla behov och budgetar.</p>
-                                        <h5 class="mb-0">Bradley Gordon</h5>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
     {% endblock %}
 
 
     {% block footer %}
+    {% now 'Y' as current_year %}
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer pt-5">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
                     <a href="index.html" class="d-inline-block mb-3">
-                        <h1 class="text-white">AVD</h1>
+                        <h1 class="text-white mb-0">Alvatten-Design</h1>
                     </a>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
-                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-                        clita duo justo et tempor</p>
+                    <p class="mb-0">
+                        Alvatten Design är din expert på pooler, spa, fontäner och vattenmiljöer. Vi erbjuder helhetslösningar från design och installation till service och underhåll. Med över 25 års erfarenhet skapar vi inspirerande och hållbara vattenmiljöer för både hem och företag. Vårt mål är att leverera kvalitet, trygghet och personlig service i varje projekt.
+                    </p>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="text-white mb-4">Kontakta oss</h5>
@@ -294,7 +230,7 @@
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="{% url 'home' %}">Alvatten Design</a>, All Right Reserved.
+                        &copy; {{ current_year }} <a class="border-bottom" href="{% url 'home' %}">Alvatten-Design</a>, All Right Reserved.
                     </div>
                 </div>
             </div>
