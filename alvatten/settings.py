@@ -1,10 +1,12 @@
+from os import getenv
+
 # Email settings for Gmail SMTP
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'avd.firstbooking.co'  # cPanel SMTP host
 EMAIL_PORT = 465  # Use SSL for cPanel
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = 'info@avd.firstbooking.co'  # Your cPanel email address
-EMAIL_HOST_PASSWORD = 'Aa12312312341'  # Set your cPanel email password here
+EMAIL_HOST_PASSWORD = getenv("PASS_EMAIL")  # Set your cPanel email password here
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 """
 Django settings for alvatten project.
@@ -32,7 +34,7 @@ SECRET_KEY = 'django-insecure-*8--%%%&h=pm98%^k0chmyuli7%i%z@ln_p-d*2@=8t=+%+&$8
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['avd.firstbooking.co', 'localhost', '127.0.0.1']
 
