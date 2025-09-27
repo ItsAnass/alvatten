@@ -2,10 +2,10 @@ from os import getenv
 
 # Email settings for Gmail SMTP
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'avd.firstbooking.co'  # cPanel SMTP host
+EMAIL_HOST = 'alvatten-design.se'  # cPanel SMTP host
 EMAIL_PORT = 465  # Use SSL for cPanel
 EMAIL_USE_SSL = True
-EMAIL_HOST_USER = 'info@avd.firstbooking.co'  # Your cPanel email address
+EMAIL_HOST_USER = 'ahmad@alvatten-design.se'  # Your cPanel email address
 EMAIL_HOST_PASSWORD = getenv("PASS_EMAIL")  # Set your cPanel email password here
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 """
